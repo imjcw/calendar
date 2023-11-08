@@ -18,14 +18,8 @@ jobs:
       with:
         go-version: 1.18
 
-    - name: 'cd script'
-      run: cd script
-
     - name: 'Gen New Year Calendar'
-      run: go run main.go -year ${{ github.event.inputs.year }}
-
-    - name: 'cd ..'
-      run: cd ..
+      run: go run script/main.go -year ${{ github.event.inputs.year }}
       
     - name: 'Show Diff'
       run: git add .
