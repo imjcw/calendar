@@ -160,7 +160,7 @@ func main() {
 	}
 
 	// 将结果写入文件
-	err = os.WriteFile("../data/"+(*tYear)+".json", resultJSON, 0644)
+	err = os.WriteFile("./data/"+(*tYear)+".json", resultJSON, 0644)
 	if err != nil {
 		fmt.Println("写入文件失败:", err)
 		return
@@ -173,7 +173,7 @@ func main() {
 	rhoJSON, _ := json.Marshal(hods)
 
 	// 将结果写入文件
-	err = os.WriteFile("../data/"+(*tYear)+"-holidays.json", rhoJSON, 0644)
+	err = os.WriteFile("./data/"+(*tYear)+"-holidays.json", rhoJSON, 0644)
 	if err != nil {
 		fmt.Println("写入文件失败:", err)
 		return
