@@ -2,9 +2,12 @@ name: Calendar Spider
 
 on:
   workflow_dispatch:
+    inputs:
+      year:
+        required: true
+        type: number
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
